@@ -2,7 +2,7 @@
 <!-- Main Sidebar Container -->
 <nav class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar">   
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
