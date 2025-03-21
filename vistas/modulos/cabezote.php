@@ -10,9 +10,6 @@
         </li>
 
     </ul>
-
-
-
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <!-- Notifications Dropdown Menu -->
@@ -42,4 +39,16 @@
             </a>
         </li>
     </ul>
+
+<!-- Salida de la barra de navegación y luego para el login-->
+ <li class="nav-item dropdown">
+    <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-user"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <a href="salir" class="dropdrown-item">
+            <i class="fas fa-sihn-out-alt mr-2"></i> Finalizar Sesión
+        </a>
+    </div>
+</li>        
 </nav>

@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +54,8 @@ if (isset($_GET["ruta"]))
       $_GET["ruta"] == "vencidas" ||
       $_GET["ruta"] == "devoluciones" ||
       $_GET["ruta"] == "salidas" ||
-      $_GET["ruta"] == "reportes"){
+      $_GET["ruta"] == "reportes"
+      $_GET["ruta"] == "salir"){
     include "modulos/".$_GET["ruta"].".php";
   } else {
         include "modulos/error404.php";
