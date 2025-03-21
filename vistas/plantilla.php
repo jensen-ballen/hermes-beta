@@ -23,6 +23,7 @@
 <script src="vistas/dist/js/demo.js"></script>
 
 <body class="hold-transition sidebar-mini">
+<body class="hold-transition login-page">
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -30,9 +31,12 @@
 
 <?php
 
+if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
+
+  echo '<div class="wrapper">';
+
 include "modulos/cabezote.php";
 include "modulos/menu.php";
-
 
 if (isset($_GET["ruta"])) 
 {
@@ -55,7 +59,11 @@ if (isset($_GET["ruta"]))
 }
 
 include "modulos/footer.php";
-
+echo '</div>';
+echo '<!-- ./wrapper -->';
+} else {
+  include "modulos/login.php";
+}
 ?>
 
 </body>
