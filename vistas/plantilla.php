@@ -22,8 +22,8 @@
 <script src="vistas/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="vistas/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="vistas/dist/js/demo.js"></script>
+<!-- AdminLTE for demo purposes 
+<script src="vistas/dist/js/demo.js"></script>-->
 
 <body class="hold-transition sidebar-mini">
 <body class="hold-transition login-page">
@@ -34,7 +34,8 @@
 
 <?php
 
-if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
+if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") 
+{
 
   echo '<div class="wrapper">';
 
@@ -54,8 +55,9 @@ if (isset($_GET["ruta"]))
       $_GET["ruta"] == "vencidas" ||
       $_GET["ruta"] == "devoluciones" ||
       $_GET["ruta"] == "salidas" ||
-      $_GET["ruta"] == "reportes"
-      $_GET["ruta"] == "salir"){
+      $_GET["ruta"] == "reportes"||
+      $_GET["ruta"] == "salir"||
+      $_GET["ruta"] == "olvido_password"){
     include "modulos/".$_GET["ruta"].".php";
   } else {
         include "modulos/error404.php";
@@ -66,7 +68,11 @@ include "modulos/footer.php";
 echo '</div>';
 echo '<!-- ./wrapper -->';
 } else {
-  include "modulos/login.php";
+  if(isset($_GET["ruta"]) && $_GET["ruta"] == "olvido_password"){
+    include "modulos/olvido_password.php";
+  } else {
+    include "modulos/login.php";
+  }
 }
 ?>
 
