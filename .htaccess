@@ -2,6 +2,4 @@ Options All -Indexes
 RewriteEngine On
 RewriteBase /hermes-beta/
 RewriteRule ^([-a-zA-Z0-9]+)$ index.php?ruta=$1 [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?ruta=$1 [L,QSA]
+
